@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>F1 CBT Championship 2026</title>
+<style>
+:root{--bg:#050608;--panel:#101216;--panel2:#17191e;--line:#2b2e35;--white:#f7f7f8;--muted:#9da2ab;--red:#e10600;--red2:#ff3b30;--silver:#c7cad0;--gold:#ffd43b;--green:#56d47a;--mercedes:#00d2be;--ferrari:#ff2800;--mclaren:#ff8700;--redbull:#3671c6}
+*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;background:radial-gradient(900px 400px at 50% -5%,#341010 0,#090a0d 50%,#050608 100%);color:var(--white);font-family:Arial,Helvetica,sans-serif;min-height:100vh}
+header{position:sticky;top:0;z-index:50;background:rgba(5,6,8,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{max-width:1250px;margin:auto;padding:13px 15px;display:flex;align-items:center;gap:14px}.logo{font-size:22px;font-weight:1000;white-space:nowrap}.logo b{color:var(--red)}
+nav{display:flex;gap:6px;overflow:auto}.navbtn{background:#121419;color:#fff;border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-weight:800;white-space:nowrap}.navbtn.active{background:var(--red);border-color:var(--red)}
+main{max-width:1250px;margin:auto;padding:22px 15px 55px}.hero{padding:20px 0 27px}.eyebrow{color:#ff4b45;font-weight:900;letter-spacing:2px;font-size:11px}.hero h1{font-size:clamp(43px,9vw,78px);line-height:.88;margin:10px 0 12px;letter-spacing:-2px}.hero p{color:var(--muted);line-height:1.5;max-width:780px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:16px}.stat{font-size:27px;font-weight:950;margin-top:5px}.muted{color:var(--muted)}.section{margin-top:23px}.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:11px}.sectionhead h2{margin:0}.btn{background:#22252b;color:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-weight:850;cursor:pointer}.btn.primary{background:var(--red);border-color:var(--red)}.btn.good{background:#185d2d;border-color:#185d2d}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:13px}.table{border-collapse:collapse;width:100%;min-width:720px}.table th,.table td{padding:12px 13px;border-bottom:1px solid var(--line);text-align:left}.table th{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#8e939d}.table tr:last-child td{border:0}.pos{width:45px;font-weight:900}.driver{display:flex;align-items:center;gap:10px}.avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#292c33;font-weight:900}.teamdot{width:7px;height:28px;border-radius:5px;display:inline-block;margin-right:8px;vertical-align:middle}.team-Mercedes{background:var(--mercedes)}.team-RedBull{background:var(--redbull)}.team-Ferrari{background:var(--ferrari)}.team-McLaren{background:var(--mclaren)}.pill{padding:5px 8px;background:#252830;border-radius:99px;font-size:12px;font-weight:800}.points{font-size:18px;font-weight:950}.latest.plus{color:#6de58b}.latest.dns,.latest.dnf{color:#ff6c66}.search,.input{width:100%;padding:11px;border-radius:9px;border:1px solid var(--line);background:#090a0d;color:#fff;font-size:14px}.bar{height:8px;background:#2a2d34;border-radius:99px;overflow:hidden}.bar i{height:100%;display:block;background:var(--red);border-radius:99px}.chart{height:245px;display:flex;align-items:end;gap:8px}.barcol{height:100%;flex:1;display:flex;flex-direction:column;justify-content:end;align-items:center;gap:4px}.barcol i{width:min(50px,80%);background:var(--red);border-radius:5px 5px 1px 1px;min-height:3px}.barcol small{font-size:9px;color:var(--muted)}
+.admin{border:1px solid #572222;background:linear-gradient(145deg,#1a1112,#0f1014);border-radius:14px;padding:16px}.admin-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:9px}.driverrow{display:grid;grid-template-columns:1.3fr 1fr 100px 120px 40px;gap:7px;align-items:center;margin:8px 0}.actions{display:flex;flex-wrap:wrap;gap:8px}.notice{padding:11px;border-radius:9px;background:#171a20;margin-top:10px}.ok{color:var(--green)}.err{color:#ff6d67}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:15px;z-index:100}.modal.show{display:flex}.modalbox{background:#121419;border:1px solid var(--line);border-radius:14px;width:100%;max-width:720px;max-height:90vh;overflow:auto;padding:17px}
+footer{text-align:center;color:#777d87;border-top:1px solid var(--line);padding:28px 15px}
+@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}.nav nav{width:100%}.admin-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.driverrow{grid-template-columns:1fr 1fr}.driverrow .name{grid-column:1/-1}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.hero h1{font-size:46px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">F1 <b>CBT</b> 2026</div><nav id="nav"></nav></div></header>
+<main id="app"></main>
+<footer>F1 CBT Championship 2026 · Live shared championship</footer>
+<script>
+const FALLBACK={"championship":{"name":"F1 CBT Championship 2026","season":2026,"updated":"Initial standings"},"drivers":[{"id":"anshuman-garg","name":"Anshuman Garg","team":"Mercedes","points":154,"latestPoints":50,"status":"Finished"},{"id":"mihir-thakur","name":"Mihir Thakur","team":"Red Bull","points":127,"latestPoints":0,"status":"DNS"},{"id":"aryan-mishra","name":"Aryan Mishra","team":"Ferrari","points":104,"latestPoints":0,"status":"DNS"},{"id":"prajwal-zurale","name":"Prajwal Zurale","team":"McLaren","points":80,"latestPoints":40,"status":"Finished"},{"id":"agastya-arya","name":"Agastya Arya","team":"McLaren","points":79,"latestPoints":44,"status":"Finished"},{"id":"tanmay-katiyaar","name":"Tanmay Katiyaar","team":"Ferrari","points":20,"latestPoints":0,"status":"Finished"},{"id":"akshaj-yarlagadda","name":"Akshaj Yarlagadda","team":"Red Bull","points":2,"latestPoints":0,"status":"DNS"},{"id":"shivam-chanshetti","name":"Shivam Chanshetti","team":"Mercedes","points":1,"latestPoints":0,"status":"Finished"}],"races":[],"settings":{"teams":["Mercedes","Red Bull","Ferrari","McLaren"],"nextRace":"TBA"}};
+let DATA=structuredClone(FALLBACK);
+let ENDPOINT=localStorage.getItem("f1cbt_endpoint")||"";
+let ADMIN_KEY=localStorage.getItem("f1cbt_admin_key")||"";
+let view="home";
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll('"',"&quot;");
+function drivers(){return [...DATA.drivers].sort((a,b)=>b.points-a.points)}
+function constructors(){let m={};DATA.drivers.forEach(d=>m[d.team]=(m[d.team]||0)+Number(d.points||0));return Object.entries(m).map(([team,points])=>({team,points})).sort((a,b)=>b.points-a.points)}
+function teamClass(t){return "team-"+String(t).replaceAll(" ","")}
+function go(v){view=v;render()}
+function nav(){let a=[["home","Home"],["drivers","Drivers"],["constructors","Constructors"],["races","Race Center"],["analytics","Analytics"],["sim","What-If"],["admin","⚙ Admin"]];$("#nav").innerHTML=a.map(x=>`<button class="navbtn ${view===x[0]?"active":""}" onclick="go('${x[0]}')">${x[1]}</button>`).join("")}
+function standings(list){return `<div class="tablewrap"><table class="table"><thead><tr><th>Pos</th><th>Driver</th><th>Team</th><th>Prev Race</th><th>Points</th></tr></thead><tbody>${list.map((x,i)=>`<tr><td class="pos">${i+1}</td><td><div class="driver"><div class="avatar">${esc(x.name[0])}</div><b>${esc(x.name)}</b></div></td><td><span class="teamdot ${teamClass(x.team)}"></span><span class="pill">${esc(x.team)}</span></td><td class="latest ${x.status==="DNS"?"dns":x.status==="DNF"?"dnf":"plus"}">${x.status==="DNS"?"DNS":x.status==="DNF"?"DNF":"+"+(Number(x.latestPoints)||0)}</td><td class="points">${x.points}</td></tr>`).join("")}</tbody></table></div>`}
+function ctable(c){let top=c[0]?.points||1;return `<div class="tablewrap"><table class="table"><thead><tr><th>Pos</th><th>Team</th><th>Prev Race</th><th>Points</th></tr></thead><tbody>${c.map((x,i)=>`<tr><td class="pos">${i+1}</td><td><span class="teamdot ${teamClass(x.team)}"></span><b>${esc(x.team)}</b></td><td class="latest plus">+${DATA.drivers.filter(d=>d.team===x.team).reduce((s,d)=>s+Number(d.latestPoints||0),0)}</td><td class="points">${x.points}</td></tr>`).join("")}</tbody></table></div>`}
+function home(d,c){let l=d[0]||{},last=[...d].sort((a,b)=>b.latestPoints-a.latestPoints)[0]||{};$("#app").innerHTML=`<div class="hero"><div class="eyebrow">F1 CBT CHAMPIONSHIP · 2026</div><h1>RACE FOR<br>THE TITLE.</h1><p>Live championship standings, race results and analytics. Updates published from the Admin panel appear here for everyone.</p></div><div class="grid"><div class="card"><div class="muted">Championship Leader</div><div class="stat">${esc(l.name||"-")}</div><div class="muted">${l.points||0} points · ${esc(l.team||"")}</div></div><div class="card"><div class="muted">Constructor Leader</div><div class="stat">${esc(c[0]?.team||"-")}</div><div class="muted">${c[0]?.points||0} points</div></div><div class="card"><div class="muted">Latest Race</div><div class="stat">+${last.latestPoints||0}</div><div class="muted">${esc(last.name||"-")}</div></div><div class="card"><div class="muted">Rounds Published</div><div class="stat">${DATA.races.length}</div><div class="muted">Next: ${esc(DATA.settings.nextRace||"TBA")}</div></div></div><div class="section"><div class="sectionhead"><h2>Drivers Championship</h2><button class="btn" onclick="go('drivers')">Full standings →</button></div>${standings(d)}</div><div class="section"><h2>Constructors</h2>${ctable(c)}</div>`}
+function driverPage(d){$("#app").innerHTML=`<div class="hero"><div class="eyebrow">DRIVERS STANDINGS</div><h1>DRIVERS</h1><p>Every point counts.</p></div><input class="search" placeholder="Search driver or team..." oninput="filterDrivers(this.value)"><div id="driverTable">${standings(d)}</div>`}
+function filterDrivers(q){q=q.toLowerCase();$("#driverTable").innerHTML=standings(drivers().filter(x=>x.name.toLowerCase().includes(q)||x.team.toLowerCase().includes(q)))}
+function constructorPage(c){$("#app").innerHTML=`<div class="hero"><div class="eyebrow">CONSTRUCTORS STANDINGS</div><h1>TEAMS</h1><p>Constructor totals are calculated automatically from driver totals.</p></div>${ctable(c)}`}
+function racePage(){let r=DATA.races||[];$("#app").innerHTML=`<div class="hero"><div class="eyebrow">RACE CENTER</div><h1>RACE RESULTS</h1><p>Published rounds.</p></div>${r.length?`<div class="grid3">${r.slice().reverse().map(x=>`<div class="card"><div class="muted">${esc(x.date||"")}</div><h2>${esc(x.name)}</h2><p>${x.results.length} drivers</p><button class="btn" onclick="showRace('${x.id}')">View results</button></div>`).join("")}</div>`:`<div class="card"><h2>No races published</h2><p class="muted">The first round will appear here after you publish it.</p></div>`}`}
+function showRace(id){let r=DATA.races.find(x=>x.id===id);if(!r)return;$("#modalTitle").textContent=r.name;$("#modalBody").innerHTML=`<p class="muted">${esc(r.date||"")}</p>`+standings(r.results.map(x=>({name:x.driver,team:x.team,points:x.points,latestPoints:x.points,status:x.status})));$("#modal").classList.add("show")}
+function analytics(d,c){let max=Math.max(...d.map(x=>x.points),1);$("#app").innerHTML=`<div class="hero"><div class="eyebrow">ANALYTICS</div><h1>DATA</h1><p>Current championship comparison.</p></div><div class="card"><h2>Driver Points</h2><div class="chart">${d.map(x=>`<div class="barcol"><i style="height:${Math.max(3,x.points/max*180)}px"></i><b>${x.points}</b><small>${esc(x.name.split(" ")[0])}</small></div>`).join("")}</div></div><div class="section grid3">${c.map(x=>`<div class="card"><div class="muted">${esc(x.team)}</div><div class="stat">${x.points}</div><div class="bar"><i style="width:${x.points/(c[0]?.points||1)*100}%"></i></div></div>`).join("")}</div>`}
+function simPage(d){$("#app").innerHTML=`<div class="hero"><div class="eyebrow">WHAT-IF SIMULATOR</div><h1>WHAT IF?</h1><p>Test a hypothetical result without changing official standings.</p></div><div class="card">${d.map(x=>`<div style="display:grid;grid-template-columns:1fr 100px;gap:8px;align-items:center;margin:7px 0"><b>${esc(x.name)}</b><input class="input" type="number" min="0" value="0" data-sim="${x.id}" oninput="simulate()"></div>`).join("")}</div><div class="section" id="simout"></div>`;simulate()}
+function simulate(){let a={};document.querySelectorAll("[data-sim]").forEach(x=>a[x.dataset.sim]=Number(x.value)||0);$("#simout").innerHTML=standings(drivers().map(x=>({...x,points:x.points+(a[x.id]||0),latestPoints:a[x.id]||0,status:"Projected"})).sort((a,b)=>b.points-a.points))}
+function adminPage(){let t=DATA.settings.teams||[];$("#app").innerHTML=`<div class="hero"><div class="eyebrow">RACE CONTROL</div><h1>ADMIN</h1><p>Connect this site once to the shared cloud database. After that, race updates go live without replacing the website.</p></div><div class="admin"><h2>Cloud connection</h2><div class="admin-grid"><input id="endpoint" class="input" placeholder="Google Apps Script Web App URL" value="${esc(ENDPOINT)}"><input id="key" class="input" type="password" placeholder="Admin key" value="${esc(ADMIN_KEY)}"><button class="btn" onclick="saveConnection()">Save connection</button></div><div class="notice">Endpoint and admin key are saved only on this device. Friends never need the key.</div></div><div class="admin section"><h2>Race information</h2><div class="admin-grid"><input id="raceName" class="input" placeholder="Race name, e.g. Round 4"><input id="raceDate" class="input" placeholder="Date"><input id="nextRace" class="input" value="${esc(DATA.settings.nextRace||"TBA")}" placeholder="Next race"></div></div><div class="admin section"><h2>Race results</h2><p class="muted">Enter points earned in this race. Totals update automatically.</p><div id="adminRows">${DATA.drivers.map(adminRow).join("")}</div><div class="actions"><button class="btn" onclick="addDriver()">+ Add driver</button><button class="btn" onclick="clearRace()">Clear race points</button></div></div><div class="admin section"><h2>Publish</h2><div class="actions"><button class="btn primary" onclick="publishRace()">🚀 Publish live</button><button class="btn" onclick="refreshFromCloud()">↻ Reload cloud data</button></div><div id="adminStatus" class="notice">${ENDPOINT?"Connected endpoint saved.":"Set your Apps Script URL and admin key first."}</div></div><div class="section"><h2>Preview</h2><div id="adminPreview">${standings(drivers())}</div></div>`}
+function adminRow(d){let t=DATA.settings.teams||[];return `<div class="driverrow" data-id="${d.id}"><input class="input name" data-k="name" value="${esc(d.name)}"><select class="input" data-k="team">${t.map(x=>`<option ${x===d.team?"selected":""}>${esc(x)}</option>`).join("")}</select><input class="input" data-k="latestPoints" type="number" min="0" value="${d.latestPoints||0}"><select class="input" data-k="status"><option ${d.status==="Finished"?"selected":""}>Finished</option><option ${d.status==="DNS"?"selected":""}>DNS</option><option ${d.status==="DNF"?"selected":""}>DNF</option></select><button class="btn" onclick="removeDriver('${d.id}')">×</button></div>`}
+function saveConnection(){ENDPOINT=$("#endpoint").value.trim();ADMIN_KEY=$("#key").value;localStorage.setItem("f1cbt_endpoint",ENDPOINT);localStorage.setItem("f1cbt_admin_key",ADMIN_KEY);setStatus("Connection saved. Testing cloud…","ok");refreshFromCloud()}
+function setStatus(t,c){let x=$("#adminStatus");if(x)x.innerHTML=`<span class="${c||""}">${t}</span>`}
+function readRows(){document.querySelectorAll(".driverrow").forEach(r=>{let d=DATA.drivers.find(x=>x.id===r.dataset.id);if(!d)return;r.querySelectorAll("[data-k]").forEach(e=>d[e.dataset.k]=e.dataset.k==="latestPoints"?Number(e.value)||0:e.value)})}
+function addDriver(){readRows();DATA.drivers.push({id:"driver-"+Date.now(),name:"New Driver",team:DATA.settings.teams[0],points:0,latestPoints:0,status:"Finished"});adminPage()}
+function removeDriver(id){readRows();DATA.drivers=DATA.drivers.filter(x=>x.id!==id);adminPage()}
+function clearRace(){document.querySelectorAll('[data-k="latestPoints"]').forEach(x=>x.value=0);document.querySelectorAll('[data-k="status"]').forEach(x=>x.value="Finished");setStatus("Race fields cleared.","ok")}
+function publishRace(){readRows();if(!ENDPOINT||!ADMIN_KEY){setStatus("Enter the cloud endpoint and admin key first.","err");return}let name=$("#raceName").value.trim()||"Race "+(DATA.races.length+1),date=$("#raceDate").value.trim();let results=DATA.drivers.map(d=>({driver:d.name,driverId:d.id,team:d.team,points:Number(d.latestPoints)||0,status:d.status}));DATA.drivers.forEach(d=>d.points+=Number(d.latestPoints)||0);DATA.races.push({id:"race-"+Date.now(),name,date,results});DATA.settings.nextRace=$("#nextRace").value.trim()||"TBA";setStatus("Publishing…");postCloud(DATA)}
+function postCloud(payload){let f=document.createElement("form");f.method="POST";f.action=ENDPOINT;f.target="cloudFrame";let a=document.createElement("textarea");a.name="payload";a.value=JSON.stringify({key:ADMIN_KEY,data:payload});f.appendChild(a);document.body.appendChild(f);$("#cloudFrame").onload=()=>{setStatus("Published. Reloading public data…","ok");setTimeout(refreshFromCloud,1000)};f.submit();setTimeout(()=>f.remove(),3000)}
+function refreshFromCloud(){
+  if(!ENDPOINT){render();if(view==="admin")setStatus("No endpoint configured. Using local fallback data.","err");return}
+  /* Always render the fallback immediately. This prevents a blank page if
+     Apps Script/JSONP is slow, blocked, or the saved endpoint is stale. */
+  render();
+  if(view==="admin")setStatus("Loading live cloud data…");
+  let cb="cb_"+Date.now(), finished=false;
+  const finishFallback=()=>{
+    if(finished)return;
+    finished=true;
+    try{delete window[cb]}catch(e){}
+    if(view==="admin")setStatus("Cloud data could not be loaded. Showing local data. Check the Web App URL/deployment.","err");
+  };
+  window[cb]=function(remote){
+    if(finished)return;
+    finished=true;
+    try{
+      if(remote && Array.isArray(remote.drivers)){
+        DATA=remote;
+        render();
+        if(view==="admin")setStatus("Cloud data loaded.","ok");
+      }else{
+        finishFallback();
+      }
+    }catch(e){
+      finishFallback();
+    }finally{
+      try{delete window[cb]}catch(e){}
+    }
+  };
+  let s=document.createElement("script");
+  s.src=ENDPOINT+(ENDPOINT.includes("?")?"&":"?")+"callback="+cb+"&t="+Date.now();
+  s.onerror=finishFallback;
+  document.body.appendChild(s);
+  setTimeout(()=>{
+    if(!finished)finishFallback();
+    try{s.remove()}catch(e){}
+  },7000);
+}
+function render(){nav();let d=drivers(),c=constructors();if(view==="home")home(d,c);else if(view==="drivers")driverPage(d);else if(view==="constructors")constructorPage(c);else if(view==="races")racePage();else if(view==="analytics")analytics(d,c);else if(view==="sim")simPage(d);else adminPage()}
+function initialLoad(){try{render();}catch(e){console.error(e)} if(ENDPOINT)refreshFromCloud()}
+</script>
+<iframe name="cloudFrame" id="cloudFrame" style="display:none"></iframe>
+<div class="modal" id="modal" onclick="if(event.target===this)this.classList.remove('show')"><div class="modalbox"><div class="sectionhead"><h2 id="modalTitle"></h2><button class="btn" onclick="document.getElementById('modal').classList.remove('show')">Close</button></div><div id="modalBody"></div></div></div>
+<script>initialLoad();</script>
+</body></html>
